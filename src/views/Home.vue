@@ -17,14 +17,17 @@
     <div v-for="user in users">
       <h2>{{ user.FirstName }}</h2>
       <img v-bind:src="user.url">
-      <p>FirstName: {{ user.FirstName }}</p>
-      <p>LastName: {{ user.LastName }}</p>      
-      <p>PhoneNumber: {{ user.PhoneNumber }}</p>
-      <p>Location: {{ user.Location }}</p>
-      <p>Bio: {{ user.Bio }}</p>
-      <p>Profession: {{ user.Profession }}</p>
-      <p>Password: {{ user.Password }}</p>
-      <p>Email: {{ user.Email }}</p>
+      <button v-on:click="showUser(user)">Show more</button>
+      <div v-if="currentUser === user">
+        <p>FirstName: {{ user.FirstName }}</p>
+        <p>LastName: {{ user.LastName }}</p>      
+        <p>PhoneNumber: {{ user.PhoneNumber }}</p>
+        <p>Location: {{ user.Location }}</p>
+        <p>Bio: {{ user.Bio }}</p>
+        <p>Profession: {{ user.Profession }}</p>
+        <p>Password: {{ user.Password }}</p>
+        <p>Email: {{ user.Email }}</p>
+      </div>
     </div>
   </div>
 </template>
