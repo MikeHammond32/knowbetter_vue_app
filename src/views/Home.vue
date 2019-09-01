@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-        <h1>New Client</h1>
+        <h1>New User</h1>
     <div>
       First Name: <input type="text" v-model="newUserFirstName">
       Last Name: <input type="text" v-model="newUserLastName">
@@ -8,11 +8,14 @@
       Location: <input type="text" v-model="newUserLocation">
       Bio: <input type="text" v-model="newUserBio">
       Profession: <input type="text" v-model="newUserProfession">
+      Password: <input type="text" v-model="newUserPassword">
+      Email: <input type="text" v-model="newUserEmail">
       <button v-on:click="createUser()">Create user</button>
     </div>
+    <router-link to="/login">Login</router-link>
     <h1>All Users</h1>
     <div v-for="user in users">
-      <h2>{{ user.name }}</h2>
+      <h2>{{ user.FirstName }}</h2>
       <img v-bind:src="user.url">
       <p>FirstName: {{ user.FirstName }}</p>
       <p>LastName: {{ user.LastName }}</p>      
@@ -20,6 +23,8 @@
       <p>Location: {{ user.Location }}</p>
       <p>Bio: {{ user.Bio }}</p>
       <p>Profession: {{ user.Profession }}</p>
+      <p>Password: {{ user.Password }}</p>
+      <p>Email: {{ user.Email }}</p>
     </div>
   </div>
 </template>
@@ -38,7 +43,9 @@ export default {
       newUserPhoneNumber: "",
       newUserLocation: "",
       newUserBio: "",
-      newUserProfession: ""
+      newUserProfession: "",
+      newUserPassword: "",
+      newUserEmail: ""
     };
   },
   created: function() {
@@ -49,12 +56,14 @@ export default {
   methods: {
     createUser: function() {
       var params = {
-        FirstName: this.newUserName,
-        LastName: this.newUserWidth,
-        PhoneNumber: this.newUserPhoneNumber,
-        Location: this.newUserLocation,
-        Bio: this.newUserBio,
-        Profession: this.newUserProfession
+        first_name: this.newUserName,
+        last_name: this.newUserWidth,
+        phone_number: this.newUserPhoneNumber,
+        location: this.newUserLocation,
+        bio: this.newUserBio,
+        profession: this.newUserProfession,
+        password: this.newUserPassword,
+        email: this.newUserEmail
       };
       axios.post("/api/users", params).then(response => {
         this.users.push(response.data);
@@ -64,6 +73,8 @@ export default {
         this.newUserLocation = "";
         this.newUserBio = "";
         this.newUserProfession = "";
+        this.newUserPassword = "";
+        this.newUserEmail = "";
       });
     },
     showUser: function(user) {
