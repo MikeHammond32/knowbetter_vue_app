@@ -1,19 +1,15 @@
 <template>
   <div class="container">
     <router-link to="/clientshow">Clients</router-link>
-        <h1>New User</h1>
+        <h1>New Rating</h1>
     <div>
-      First Name: <input type="text" v-model="newUserFirstName">
-      Last Name: <input type="text" v-model="newUserLastName">
-      Phone Number: <input type="text" v-model="newUserPhoneNumber">
-      Location: <input type="text" v-model="newUserLocation">
-      Bio: <input type="text" v-model="newUserBio">
-      Profession: <input type="text" v-model="newUserProfession">
-      Password: <input type="text" v-model="newUserPassword">
-      Email: <input type="text" v-model="newUserEmail">
-      <button v-on:click="createUser()">Create user</button>
+      Workease(1-10): <input type="text" v-model="newRatingWorkease">
+      Reliability of Payment(1-10): <input type="text" v-model="newRatingPayment">
+      Comment: <input type="text" v-model="newRatingComment">
+      Client ID: <input type="text" v-model="newRatingClient_Id">
+      User ID: <input type="text" v-model="newRatingUser_Id">
+      <button v-on:click="createRating()">Add Rating</button>
     </div>
-    <router-link to="/login">Login</router-link>
     <h1>All Users</h1>
     <div v-for="user in users">
       <h2>{{ user.FirstName }}</h2>
@@ -106,4 +102,3 @@ export default {
   }
 };
 </script>
-
