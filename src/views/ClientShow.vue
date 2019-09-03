@@ -1,10 +1,11 @@
 <template>
-  <div class="home">
+  <div class="clientshow">
     <h1>{{ Clients }}</h1>
     <div>
       <h2>First Name: {{ client.first_name }}</h2>
       <h2>Last Name: {{ client.last_name }}</h2>
       <h2>Location: {{ client.location }}</h2>
+      <!-- <h2>Comments: {{ client.location }}</h2> -->
     </div>
   </div>
 </template>
@@ -19,7 +20,7 @@ export default {
   data: function() {
     return {
       message: "Welcome to Client Show!",
-      shoe: {}
+      Rating: {}
     };
   },
   created: function() {

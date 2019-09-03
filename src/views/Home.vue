@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <router-link to="/rating">Add Rating</router-link>
     <router-link to="/clientshow">Clients</router-link>
         <h1>New User</h1>
     <div>

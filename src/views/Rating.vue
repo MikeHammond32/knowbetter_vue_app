@@ -1,16 +1,16 @@
 <template>
   <div class="rating">
-    <router-link to="/ratings">Add Rating</router-link>
         <h1>New Rating</h1>
     <div>
       Workease(1-10): <input type="text" v-model="newRatingWorkease">
       Reliability of Payment(1-10): <input type="text" v-model="newRatingPayment">
       Comment: <input type="text" v-model="newRatingComment">
       <select>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+        <option value="volvo">Mary Jackson</option>
+        <option value="saab">Jim Hopper</option>
+        <option value="mercedes">Larry James</option>
+        <option value="audi">Lee Sin</option>
+        <option value="audi">James Brown</option>
       </select>
       <button v-on:click="createRating()"> Add Rating</button>
     </div>
