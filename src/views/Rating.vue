@@ -1,30 +1,18 @@
 <template>
-  <div class="container">
-    <router-link to="/clientshow">Clients</router-link>
+  <div class="rating">
+    <router-link to="/ratings">Add Rating</router-link>
         <h1>New Rating</h1>
     <div>
       Workease(1-10): <input type="text" v-model="newRatingWorkease">
       Reliability of Payment(1-10): <input type="text" v-model="newRatingPayment">
       Comment: <input type="text" v-model="newRatingComment">
-      Client ID: <input type="text" v-model="newRatingClient_Id">
-      User ID: <input type="text" v-model="newRatingUser_Id">
-      <button v-on:click="createRating()">Add Rating</button>
-    </div>
-    <h1>All Users</h1>
-    <div v-for="user in users">
-      <h2>{{ user.FirstName }}</h2>
-      <img v-bind:src="user.url">
-      <button v-on:click="showUser(user)">Show more</button>
-      <div v-if="currentUser === user">
-        <p>FirstName: {{ user.FirstName }}</p>
-        <p>LastName: {{ user.LastName }}</p>      
-        <p>PhoneNumber: {{ user.PhoneNumber }}</p>
-        <p>Location: {{ user.Location }}</p>
-        <p>Bio: {{ user.Bio }}</p>
-        <p>Profession: {{ user.Profession }}</p>
-        <p>Password: {{ user.Password }}</p>
-        <p>Email: {{ user.Email }}</p>
-      </div>
+      <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+      <button v-on:click="createRating()"> Add Rating</button>
     </div>
   </div>
 </template>
@@ -38,66 +26,41 @@ export default {
     return {
       users: [],
       currentUser: {},
-      newUserFirstName: "",
-      newUserLastName: "",
-      newUserPhoneNumber: "",
-      newUserLocation: "",
-      newUserBio: "",
-      newUserProfession: "",
-      newUserPassword: "",
-      newUserEmail: ""
+      newRatingWorkease: "",
+      newRatingPayment: "",
+      newRatingComment: "",
+      newRatingRatingId: "",
+      newRatingUserId: "",
+      newRatingClientId: ""
     };
   },
   created: function() {
-    axios.get("/api/users").then(response => {
+    axios.get("/api/ratings").then(response => {
       this.users = response.data;
     });
   },
   methods: {
-    createUser: function() {
+    createRating: function() {
       var params = {
-        first_name: this.newUserName,
-        last_name: this.newUserWidth,
-        phone_number: this.newUserPhoneNumber,
-        location: this.newUserLocation,
-        bio: this.newUserBio,
-        profession: this.newUserProfession,
-        password: this.newUserPassword,
-        email: this.newUserEmail
+        workease: this.newRatingWorkease,
+        payment: this.newRatingPayment,
+        comment: this.newRatingComment,
+        client_id: this.newRatingClientId
       };
-      axios.post("/api/users", params).then(response => {
+      axios.post("/api/ratings", params).then(response => {
         this.users.push(response.data);
-        this.newUserFirstName = "";
-        this.newUserLastName = "";
-        this.newUserPhoneNumber = "";
-        this.newUserLocation = "";
-        this.newUserBio = "";
-        this.newUserProfession = "";
-        this.newUserPassword = "";
-        this.newUserEmail = "";
+        this.newRatingWorkease = "";
+        this.newRatingPayment = "";
+        this.newRatingComment = "";
+        this.newRatingRatingId = "";
       });
     },
-    showUser: function(user) {
-      if (this.currentUser === user) {
-        this.currentUser = {};
+    showRating: function(rating) {
+      if (this.currentRating === rating) {
+        this.currentRating = {};
       } else {
-        this.currentUser = user;
+        this.currentRating = rating;
       }
-    },
-    updateUser: function(user) {
-      var params = {
-        FirstName: user.FirstName,
-        LastName: user.LastName,
-        PhoneNumber: user.PhoneNumber,
-        Location: user.Location,
-        Bio: user.Bio,
-        Profession: user.Profession
-      };
-      axios
-        .patch("/api/users/" + user.id, params)
-        .then(response => {
-          this.currentUser = {};
-        });
     }
   }
 };
