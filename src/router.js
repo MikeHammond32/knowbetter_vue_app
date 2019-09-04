@@ -4,8 +4,9 @@ import Home from './views/Home.vue';
 import Signup from "./views/Signup.vue";
 import Login from "./views/Login.vue";
 import Logout from "./views/Logout.vue";
-import ClientShow from "./views/ClientShow.vue";
+import ClientsShow from "./views/ClientsShow.vue";
 import Rating from "./views/Rating.vue";
+import ClientIndex from "./views/ClientIndex.vue";
 
 Vue.use(Router)
 
@@ -29,7 +30,8 @@ export default new Router({
     { path: "/signup", name: "signup", component: Signup },
     { path: "/login", name: "login", component: Login },
     { path: "/logout", name: "logout", component: Logout },
-    { path: "/clientshow", name: "clientshow", component: ClientShow },
-    { path: "/rating", name: "rating", component: Rating }
+    { path: "/clients/:id", name: "clientshow", component: ClientsShow },
+    { path: "/rating", name: "rating", component: Rating },
+    { path: "/clientindex", name: "clientindex", component: ClientIndex }
   ]
-})
+});
