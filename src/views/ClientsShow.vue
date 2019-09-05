@@ -4,7 +4,7 @@
     <h1>Last Name: {{ client.last_name}} </h1>
     <h1>Location: {{ client.location }} </h1> 
     <div v-for="rating in client.ratings">
-      {{rating.comment}} {{rating.workease}} {{rating.payment}}
+      <p>Comment: {{rating.comment}}</p> Workease: {{rating.workease}} Reliability of Payment: {{rating.payment}}
     </div>
     <div>
 <!--       <h2>First Name: {{ client.first_name }}</h2>

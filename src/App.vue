@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header-wrapper">
       <div class="site-name">
-        <h1>sitename</h1>
+        <h1>KnowBetter</h1>
         <h2>lorem ipsum dolor sit amet vivamus</h2>
       </div>
     </div>
@@ -29,7 +29,7 @@
       <div class="mini-menu">
             <label>
           <select class="selectnav">
-            <option value="#" selected="">Home</option>
+            <option value="" selected="">Home</option>
             <option value="#">About</option>
             <option value="#">→ Another action</option>
             <option value="#">→ Something else here</option>
