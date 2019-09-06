@@ -45,17 +45,17 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="block col-md-3">
-            <h1>Praesent dapibus, neque id cursus faucibus</h1>
+            <h1></h1>
             <h1>New User</h1>
             <div>
-              First Name: <input type="text" v-model="newUserFirstName">
-              Last Name: <input type="text" v-model="newUserLastName">
-              Phone Number: <input type="text" v-model="newUserPhoneNumber">
-              Location: <input type="text" v-model="newUserLocation">
-              Bio: <input type="text" v-model="newUserBio">
-              Profession: <input type="text" v-model="newUserProfession">
-              Password: <input type="text" v-model="newUserPassword">
-              Email: <input type="text" v-model="newUserEmail">
+              <p>First Name: <input type="text" v-model="newUserFirstName"></p>
+              <p>Last Name: <input type="text" v-model="newUserLastName"></p>
+              <p>Phone Number: <input type="text" v-model="newUserPhoneNumber"></p>
+              <p>Location: <input type="text" v-model="newUserLocation"></p>
+              <p>Bio: <input type="text" v-model="newUserBio"></p>
+              <p>Profession: <input type="text" v-model="newUserProfession"></p>
+              <p>Password: <input type="text" v-model="newUserPassword"></p>
+              <p>Email: <input type="text" v-model="newUserEmail"></p>
               <button v-on:click="createUser()">Create user</button>
             </div>
           </div>

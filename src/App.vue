@@ -3,7 +3,7 @@
     <div class="header-wrapper">
       <div class="site-name">
         <h1>KnowBetter</h1>
-        <h2>lorem ipsum dolor sit amet vivamus</h2>
+        <h2></h2>
       </div>
     </div>
     <div class="menu">
@@ -16,12 +16,11 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Solutions</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/rating">New Rating</a></li>
+              <li><a href="/clientindex">Clients</a></li>
+              <li><a href="/Login">Sign In</a></li>
+              <li><a href="/Logout">Log out</a></li>
             </ul>
           </div><!--/.navbar-collapse -->
         </div>
