@@ -52,17 +52,17 @@
           <div class="block col-md-2 col-sm-6">
             <h1>Vitae lin</h1>
             <ul>
-              <li><a href="#">Phasellus ultrices</a></li>
-              <li><a href="#">Sed adipiscing lipsum</a></li>
-              <li><a href="#">Nulla sed leoniton</a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
             </ul>
           </div>
           <div class="block col-md-2 col-sm-6">
             <h1>Luctrus</h1>
             <ul>
-              <li><a href="#">Lorem ipsum</a></li>
-              <li><a href="#">Donec nec justo</a></li>
-              <li><a href="#">Morbi in se</a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
             </ul>
           </div>
           <div class="block col-md-2 col-sm-6">
