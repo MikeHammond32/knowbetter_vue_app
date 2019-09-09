@@ -68,13 +68,13 @@
           <div class="block col-md-2 col-sm-6">
             <h1>consetu</h1>
             <ul>
-              <li><a href="#">Quisque a lectus</a></li>
-              <li><a href="#">Donec consecte</a></li>
-              <li><a href="#">Nulla sed leoniton</a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
             </ul>
           </div>
           <div class="block col-md-3">
-            <h1>Praesent dapibus, neque id cursus faucibus</h1>
+            <h1></h1>
             <div class="input-group">
                 <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
                 <span class="input-group-btn">
@@ -83,7 +83,7 @@
             </div> 
           </div>
           <div class="block col-md-3">
-            <h1> Aliquam quam lectusfacilisis auctor</h1>
+            <h1></h1>
             <ul class="social">
               <li><a href="#"><i class="fw-icon-twitter"></i></a></li>
               <li><a href="#"><i class="fw-icon-facebook"></i></a></li>
