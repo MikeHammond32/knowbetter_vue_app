@@ -31,7 +31,7 @@
             <option value="" selected="">Home</option>
             <option value="#">About</option>
             <option value="#">→ Another action</option>
-            <option value="#">→ Something else here</option>
+            <option value="#">→ </option>
             <option value="#">→ Another action</option>
             <option value="#">→ Something else here</option>
             <option value="#">Services</option>
